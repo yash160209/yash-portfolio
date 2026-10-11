@@ -109,7 +109,7 @@ export const projects: Project[] = [
 ];
 
 export const contact = {
-  email: "yashmakwana1609@gmail.com",
+  email: "yashmakwana.dev@gmail.com",
   githubUrl: "https://github.com/yash160209",
   instagramUrl: "https://instagram.com/the.unfiltered_yash",
 };
