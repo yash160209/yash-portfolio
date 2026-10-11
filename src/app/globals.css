@@ -2818,7 +2818,7 @@ button:focus-visible {
 }
 
 .visual-sun {
-  background: radial-gradient(ellipse at 80% 43%, rgba(22, 139, 255, 0.2), transparent 43%), #11141a;
+  background: radial-gradient(ellipse at 80% 43%, rgba(58, 211, 183, 0.2), transparent 43%), #111717;
 }
 
 .visual-techfair {
@@ -2857,7 +2857,7 @@ button:focus-visible {
 }
 
 .visual-sun .visual-brand {
-  color: #71baff;
+  color: #86dfc9;
 }
 
 .visual-techfair .visual-brand {
@@ -2865,14 +2865,14 @@ button:focus-visible {
 }
 
 .sun-orb {
-  border-color: rgba(22, 139, 255, 0.45);
-  background: radial-gradient(circle at 40% 40%, rgba(22, 139, 255, 0.4), rgba(22, 139, 255, 0.08) 66%, transparent 68%);
-  box-shadow: 0 0 42px rgba(22, 139, 255, 0.12);
+  border-color: rgba(58, 211, 183, 0.45);
+  background: radial-gradient(circle at 40% 40%, rgba(58, 211, 183, 0.4), rgba(58, 211, 183, 0.08) 66%, transparent 68%);
+  box-shadow: 0 0 42px rgba(58, 211, 183, 0.12);
 }
 
 .device {
-  border-color: rgba(128, 182, 244, 0.4);
-  background: linear-gradient(135deg, #29364a, #111722 72%);
+  border-color: rgba(134, 223, 201, 0.4);
+  background: linear-gradient(135deg, #29413e, #111a19 72%);
 }
 
 .ring-one {

@@ -1,11 +1,28 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Project } from "@/data/projects";
 import { ProjectVisual } from "@/components/project-visual";
 
 export function ProjectCard({ project, index }: { project: Project; index: string }) {
   return (
     <article className="project-card">
-      {project.visual === "cake" ? (
+      {project.previewImage ? (
+        <Link
+          className="project-visual-link"
+          href={`/projects/${project.slug}`}
+          aria-label={`View ${project.name} project details`}
+          style={{ aspectRatio: `${project.previewImage.width} / ${project.previewImage.height}`, overflow: "hidden" }}
+        >
+          <Image
+            src={project.previewImage.src}
+            alt={project.previewImage.alt}
+            width={project.previewImage.width}
+            height={project.previewImage.height}
+            sizes="(max-width: 620px) 100vw, (max-width: 900px) 48vw, 33vw"
+            style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </Link>
+      ) : project.visual === "cake" ? (
         <div className="project-visual-link">
           <ProjectVisual
             visual={project.visual}
@@ -69,7 +86,7 @@ export function ProjectCard({ project, index }: { project: Project; index: strin
               target="_blank"
               rel="noopener noreferrer"
             >
-              View Code <span aria-hidden="true">↗</span>
+              {project.cardSourceLabel ?? project.sourceLabel ?? "View Code"} <span aria-hidden="true">↗</span>
             </a>
           ) : project.status === "Demo Ready" ? (
             <span className="project-action project-action-unavailable" aria-disabled="true">

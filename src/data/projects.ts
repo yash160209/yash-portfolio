@@ -13,6 +13,14 @@ export type Project = {
   planned: string[];
   challenge: string;
   nextSteps: string;
+  sourceLabel?: string;
+  cardSourceLabel?: string;
+  previewImage?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
   liveUrl: string | null;
   sourceUrl: string | null;
   visual: "cake" | "sun" | "techfair";
@@ -47,20 +55,28 @@ export const projects: Project[] = [
     slug: "sun-electronics",
     name: "Sun Electronics",
     category: "Electronics shop website",
-    status: "In Progress",
+    status: "Demo Ready",
     description:
-      "An electronics shop website project focused on presenting products and making customer enquiries easier.",
+      "A modern electronics business website with a clean interface, product presentation, and clear customer contact options.",
     overview:
-      "Sun Electronics is an electronics shop website project focused on presenting products and making customer enquiries easier.",
-    technologies: [],
+      "A modern electronics business website with a clean interface, product presentation, and clear customer contact options.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
     completed: [],
     planned: [],
     challenge:
       "Designing a clear way to present products while keeping the enquiry experience straightforward.",
     nextSteps:
-      "Continue development and verify features as they are implemented.",
-    liveUrl: null,
-    sourceUrl: null,
+      "Continue refining the product presentation and customer enquiry experience as the project evolves.",
+    sourceLabel: "GitHub Repository",
+    cardSourceLabel: "GitHub Source",
+    previewImage: {
+      src: "/projects/sun-electronics-preview.png",
+      alt: "Sun Electronics homepage showing the electronics shop's product-focused design and contact options",
+      width: 1917,
+      height: 918,
+    },
+    liveUrl: "https://sun-electronics.vercel.app/",
+    sourceUrl: "https://github.com/yash160209/sun-electronics",
     visual: "sun",
   },
   {

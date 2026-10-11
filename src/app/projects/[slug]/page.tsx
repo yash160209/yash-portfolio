@@ -73,7 +73,7 @@ async function ProjectPageContent({ params }: PageProps) {
               )}
               {project.sourceUrl && (
                 <a className="button button-secondary" href={project.sourceUrl} target="_blank" rel="noopener noreferrer">
-                  View source code <span aria-hidden="true">↗</span>
+                  {project.sourceLabel ?? "View source code"} <span aria-hidden="true">↗</span>
                 </a>
               )}
               {!project.liveUrl && !project.sourceUrl && (
